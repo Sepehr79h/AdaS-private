@@ -278,10 +278,10 @@ def adaptive_stop(x_data,y_data,threshold_min,epoch_wait):
 
 
 def slope(y_data,breakpoint):
-    return (y_data[int(breakpoint)]-y_data[GLOBALS.CONFIG['stable_epoch']])/(breakpoint-GLOBALS.CONFIG['stable_epoch'])
+    return (y_data[int(breakpoint)]-y_data[GLOBALS.CONFIG['stable_epoch']])/(breakpoint-GLOBALS.CONFIG['stable_epoch']+0.0001)
 
 def slope_clone(y_data,breakpoint):
-    return (y_data[int(breakpoint)]-y_data[0])/(breakpoint)
+    return (y_data[int(breakpoint)]-y_data[0])/(breakpoint+0.0001)
 
 
 
@@ -392,7 +392,7 @@ def create_rank_graph(file_name,shortcut_indexes):
     plt.show()
     return True
 
-#create_rank_graph('AdaS_adapt_trial=0_net=DASNet34_0.1_dataset=CIFAR10.xlsx',[7,16,29])
+create_rank_graph('AdaS_adapt_trial=0_net=DASNet34_0.1_dataset=CIFAR10.xlsx',[7,16,29])
 
 '''
 shortcut_indexes=[7,16,29]
