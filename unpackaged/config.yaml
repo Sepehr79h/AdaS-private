@@ -17,10 +17,10 @@ adapt_trials_kernel: 10
 epochs_per_trial: 20
 
 mapping_condition_threshold: 10
-delta_threshold_kernel: 0.2
+delta_threshold_kernel: 0.0225
 delta_threshold: 0.01
 delta_threshold_values:
-  - 0.0225
+  - 0.01
 delta_threshold_kernel_values:
   - 0.0225
   - 0.1
